@@ -26,11 +26,15 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         
         progressView.setProgress(0.0, animated: false)
-        goalLabel.text = "Goal: $0"
-        savedLabel.text = "Saved: $0"
+        goalLabel.text = "Goal: 🤔"
+        savedLabel.text = "Saved: 🤔"
         quoteText.text = "Tap the streak circle to update your streak 👆"
-        streak.setTitle("?", for: .normal)
+        streak.setTitle("🔄", for: .normal)
         streak.addTarget(self, action: #selector(self.refreshUI), for: .touchUpInside)
+        
+        let swipeControl = UISwipeGestureRecognizer(target: self, action: #selector(self.refreshUI))
+        swipeControl.direction = .down
+        self.view.addGestureRecognizer(swipeControl)
     }
 
     override func didReceiveMemoryWarning() {
