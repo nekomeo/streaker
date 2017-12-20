@@ -14,11 +14,10 @@ class SecondViewController: UICollectionViewController {
     fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     fileprivate let itemsPerRow: CGFloat = 2
     
-    let trophies:[Trophy] = [Trophy(image: #imageLiteral(resourceName: "bkg"), title: "Trophy 1"),
-                             Trophy(image: #imageLiteral(resourceName: "bkg"), title: "Trophy 2"),
-                             Trophy(image: #imageLiteral(resourceName: "bkg"), title: "Trophy 3"),
-                             Trophy(image: #imageLiteral(resourceName: "bkg"), title: "Trophy 4"),
-                             Trophy(image: #imageLiteral(resourceName: "bkg"), title: "Trophy 5")]
+    let trophies:[Trophy] = [Trophy(image: #imageLiteral(resourceName: "trophy4"), title: "Week of Zen"),
+                             Trophy(image: #imageLiteral(resourceName: "trophy2"), title: "Building Blocks"),
+                             Trophy(image: #imageLiteral(resourceName: "trophy3"), title: "Enlightenment"),
+                             Trophy(image: #imageLiteral(resourceName: "trophy1"), title: "Nirvana")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +43,7 @@ extension SecondViewController {
                                                       for: indexPath) as! TrophyCell
         
         let trophyPhoto = trophies[indexPath.row].image
-        cell.backgroundColor = UIColor.white
+        cell.backgroundColor = UIColor.clear
 
         cell.trophyImage.image = trophyPhoto
         cell.trophyLabel.text = trophies[indexPath.row].title
@@ -60,7 +59,7 @@ extension SecondViewController {
             let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
                                                                              withReuseIdentifier: "TrophyViewHeaderView",
                                                                              for: indexPath) as! TrophyViewHeaderView
-            headerView.headerTitle.text = "Hall of Victory"
+            headerView.headerTitle.text = "Steps to Enlightenment"
             return headerView
         default:
             assert(false, "Unexpected element kind")
@@ -74,7 +73,7 @@ extension SecondViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
     
-        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+        let paddingSpace = (sectionInsets.left * (itemsPerRow + 1)) - 10
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
         

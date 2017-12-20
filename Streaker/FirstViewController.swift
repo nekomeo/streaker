@@ -34,8 +34,8 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         
         progressView.setProgress(0.0, animated: false)
-        goalLabel.text = "☁"
-        savedLabel.text = "☁"
+        goalLabel.text = ""
+        savedLabel.text = ""
         quoteText.text = "Tap the streak circle to update your streak."
         streak.text = "↻"
         
