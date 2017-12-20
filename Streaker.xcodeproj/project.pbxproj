@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6EDEBDBB1FEA1354002F198C /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 6EDEBDBA1FEA1354002F198C /* awsconfiguration.json */; };
 		6EDEBDBD1FEA1371002F198C /* Streaks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDEBDBC1FEA1371002F198C /* Streaks.swift */; };
+		6EDEBDBF1FEA1ED5002F198C /* FirstViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDEBDBE1FEA1ED5002F198C /* FirstViewControllerViewModel.swift */; };
 		79A6DFB31BD4637065177E28 /* Pods_Streaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 139300F2B1AABE4723AA5D87 /* Pods_Streaker.framework */; };
 		D48084371FE9B0E500F78738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48084361FE9B0E500F78738 /* AppDelegate.swift */; };
 		D48084391FE9B0E500F78738 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48084381FE9B0E500F78738 /* FirstViewController.swift */; };
@@ -28,6 +29,7 @@
 		21047898B713D683CEC53CA3 /* Pods-Streaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Streaker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Streaker/Pods-Streaker.release.xcconfig"; sourceTree = "<group>"; };
 		6EDEBDBA1FEA1354002F198C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		6EDEBDBC1FEA1371002F198C /* Streaks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Streaks.swift; sourceTree = "<group>"; };
+		6EDEBDBE1FEA1ED5002F198C /* FirstViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewControllerViewModel.swift; sourceTree = "<group>"; };
 		7D7025917993C27425D1AC79 /* Pods-Streaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Streaker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Streaker/Pods-Streaker.debug.xcconfig"; sourceTree = "<group>"; };
 		D48084331FE9B0E500F78738 /* Streaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Streaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48084361FE9B0E500F78738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				D480844E1FE9CC5300F78738 /* Trophy.swift */,
 				D48084521FE9D1D100F78738 /* TrophyCell.swift */,
 				D48084541FE9D84200F78738 /* TrophyViewHeaderView.swift */,
+				6EDEBDBE1FEA1ED5002F198C /* FirstViewControllerViewModel.swift */,
 			);
 			path = Streaker;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EDEBDBF1FEA1ED5002F198C /* FirstViewControllerViewModel.swift in Sources */,
 				D480843B1FE9B0E600F78738 /* SecondViewController.swift in Sources */,
 				D480844D1FE9C84E00F78738 /* StreakProgressView.swift in Sources */,
 				D48084371FE9B0E500F78738 /* AppDelegate.swift in Sources */,
