@@ -18,7 +18,6 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var goalLabel: UILabel!
     @IBOutlet weak var streak: UICountingLabel!
     
-    
     let emitter = CAEmitterLayer()
     
     let goal = 5000.00
@@ -38,6 +37,11 @@ class FirstViewController: UIViewController {
         let swipeControl = UISwipeGestureRecognizer(target: self, action: #selector(self.refreshUI))
         swipeControl.direction = .down
         self.view.addGestureRecognizer(swipeControl)
+        
+        let tapControl = UITapGestureRecognizer(target: self, action: #selector(self.refreshUI))
+        tapControl.numberOfTapsRequired = 1
+        streak.addGestureRecognizer(tapControl)
+        streak.isUserInteractionEnabled = true
     }
 
     override func didReceiveMemoryWarning() {
