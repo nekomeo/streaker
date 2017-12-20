@@ -14,13 +14,13 @@
 import Foundation
 import UIKit
 import AWSDynamoDB
-import AWSCore
 
 class Streaks: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     
     @objc var _streakId: NSNumber?
     @objc var _longest: NSNumber?
     @objc var _streak: NSNumber?
+    @objc var _trophies: [String]?
     
     class func dynamoDBTableName() -> String {
 
@@ -37,6 +37,7 @@ class Streaks: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
                "_streakId" : "streakId",
                "_longest" : "longest",
                "_streak" : "streak",
+               "_trophies" : "trophies",
         ]
     }
 }
