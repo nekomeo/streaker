@@ -54,7 +54,6 @@ class FirstViewController: UIViewController {
     }
     
     @objc func refreshUI() {
-        launchTrophyModal()
         viewModel.getStreaks()
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: {
@@ -72,13 +71,17 @@ class FirstViewController: UIViewController {
                     self?.streak.countFromZero(to: CGFloat(truncating: streakFromDynamo))
                     if let goal = self?.goal, var saved = self?.saved{
                         
-                        saved = saved + ((streaksFromDynamo._streak?.doubleValue)! * 10)
+                        saved = saved + (streakFromDynamo.doubleValue * 10)
                         
                         self?.progressView.setProgress(Float(saved/goal), animated: true)
                         let goalAmt = String(format: "$%.02f", goal)
                         let savedAmt = String(format: "$%.02f", saved)
                         self?.goalLabel.text = "Goal: \(goalAmt)"
                         self?.savedLabel.text = "Saved: \(savedAmt)"
+                    }
+                    
+                    if streakFromDynamo.intValue > 3 {
+                        self?.launchTrophyModal()
                     }
                 }
                 

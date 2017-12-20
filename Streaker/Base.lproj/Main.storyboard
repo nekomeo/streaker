@@ -138,32 +138,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SxA-yS-OM0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" red="0.32911333440000001" green="0.5113205314" blue="0.58441853519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comp 1_00032" translatesAutoresizingMaskIntoConstraints="NO" id="3Me-VU-h9X" userLabel="animated image">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="636"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOT-j4-fUH">
-                                <rect key="frame" x="296" y="44" width="63" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="63" id="6fk-N8-zrx"/>
-                                    <constraint firstAttribute="height" constant="30" id="urM-Ec-vgy"/>
-                                </constraints>
+                                <rect key="frame" x="124" y="533" width="127" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Dismiss">
                                     <color key="titleColor" red="0.32911333440000001" green="0.5113205314" blue="0.58441853519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="dismissButton:" destination="0Zg-b9-U3V" eventType="touchUpInside" id="5Sh-Ah-ewc"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comp 1_00032" translatesAutoresizingMaskIntoConstraints="NO" id="3Me-VU-h9X" userLabel="animated image">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3Me-VU-h9X" firstAttribute="top" secondItem="gA5-S1-ZsQ" secondAttribute="top" id="4a8-AW-bcG"/>
                             <constraint firstItem="GU1-MN-5js" firstAttribute="trailing" secondItem="3Me-VU-h9X" secondAttribute="trailing" id="5sL-Mh-owt"/>
-                            <constraint firstItem="GU1-MN-5js" firstAttribute="trailing" secondItem="tOT-j4-fUH" secondAttribute="trailing" constant="16" id="KoD-fi-y47"/>
+                            <constraint firstItem="tOT-j4-fUH" firstAttribute="leading" secondItem="GU1-MN-5js" secondAttribute="leading" constant="124" id="DI2-Tx-YgN"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="SxA-yS-OM0" secondAttribute="bottom" constant="-34" id="Omf-Cr-fzr"/>
+                            <constraint firstItem="SxA-yS-OM0" firstAttribute="leading" secondItem="GU1-MN-5js" secondAttribute="leading" id="ULG-Fu-ynP"/>
+                            <constraint firstItem="SxA-yS-OM0" firstAttribute="top" secondItem="gA5-S1-ZsQ" secondAttribute="topMargin" constant="-44" id="UME-Xu-Qdy"/>
+                            <constraint firstItem="GU1-MN-5js" firstAttribute="trailing" secondItem="tOT-j4-fUH" secondAttribute="trailing" constant="124" id="W9s-0v-4wb"/>
                             <constraint firstItem="3Me-VU-h9X" firstAttribute="leading" secondItem="GU1-MN-5js" secondAttribute="leading" id="pcV-yR-vKJ"/>
-                            <constraint firstItem="tOT-j4-fUH" firstAttribute="top" secondItem="GU1-MN-5js" secondAttribute="top" id="s9c-TZ-F7d"/>
-                            <constraint firstItem="GU1-MN-5js" firstAttribute="bottom" secondItem="3Me-VU-h9X" secondAttribute="bottom" id="vQ8-Yv-Mfc"/>
+                            <constraint firstItem="GU1-MN-5js" firstAttribute="trailing" secondItem="SxA-yS-OM0" secondAttribute="trailing" id="t1J-5n-i9w"/>
+                            <constraint firstItem="GU1-MN-5js" firstAttribute="bottom" secondItem="3Me-VU-h9X" secondAttribute="bottom" constant="142" id="vQ8-Yv-Mfc"/>
+                            <constraint firstItem="tOT-j4-fUH" firstAttribute="bottom" secondItem="3Me-VU-h9X" secondAttribute="bottom" constant="-70" id="xRH-jY-90B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GU1-MN-5js"/>
                     </view>
