@@ -10,7 +10,14 @@ import Foundation
 import UIKit
 
 class TrophyModalViewController: UIViewController {
-    override func viewDidLoad() {
-        self.view.backgroundColor = UIColor(red: 255.0, green: 255.0, blue: 255.0, alpha: 0.5)
+    
+    
+    @IBOutlet weak var animatedImage: UIImageView!
+    
+    @IBAction func dismissButton(_ sender: Any) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
+    
+    
+    
 }

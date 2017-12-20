@@ -54,7 +54,7 @@ class FirstViewController: UIViewController {
     }
     
     @objc func refreshUI() {
-        
+        launchTrophyModal()
         viewModel.getStreaks()
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: {
@@ -80,18 +80,6 @@ class FirstViewController: UIViewController {
                         self?.goalLabel.text = "Goal: \(goalAmt)"
                         self?.savedLabel.text = "Saved: \(savedAmt)"
                     }
-                    
-//                    if streaksFromDynamo._streak?.intValue == 3 {
-//                        launchTrophyModal()
-//                    }
-                } else {
-                    if let goal = self?.goal, let saved = self?.saved{
-                        self?.progressView.setProgress(Float(saved/goal), animated: true)
-                        let goalAmt = String(format: "$%.02f", goal)
-                        let savedAmt = String(format: "$%.02f", saved)
-                        self?.goalLabel.text = "Goal: \(goalAmt)"
-                        self?.savedLabel.text = "Saved: \(savedAmt)"
-                    }
                 }
                 
             }
@@ -109,9 +97,12 @@ class FirstViewController: UIViewController {
     }
     
     func launchTrophyModal() {
-        let modalViewController = TrophyModalViewController()
-        modalViewController.modalPresentationStyle = .overCurrentContext
-        present(modalViewController, animated: true, completion: nil)
+        let vc = (
+            storyboard?.instantiateViewController(
+                withIdentifier: "TrophyModal")
+            )!
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: true, completion: nil)
     }
 }
 
