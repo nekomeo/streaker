@@ -9,12 +9,14 @@ PODS:
   - RxCocoa (4.0.0):
     - RxSwift (~> 4.0)
   - RxSwift (4.0.0)
+  - UICountingLabel (1.4.1)
 
 DEPENDENCIES:
   - AWSDynamoDB
   - AWSMobileClient
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
+  - UICountingLabel
 
 SPEC CHECKSUMS:
   AWSAuthCore: 4c882c1371cd0907414ff25c29e97fda4a69b57d
@@ -23,7 +25,8 @@ SPEC CHECKSUMS:
   AWSMobileClient: 7928d2da4b52f318ac4b89bed11bd27f4ab5d934
   RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
+  UICountingLabel: faf890b505d96312e324a86718f031fafffb0ccb
 
-PODFILE CHECKSUM: 32ab238ffb96713e441e56017c3d8c825faffefb
+PODFILE CHECKSUM: aa09d94a92f85ffdfd917ffe7a2391f2addcbf6e
 
 COCOAPODS: 1.3.1

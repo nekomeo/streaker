@@ -26,7 +26,6 @@ class SecondViewController: UICollectionViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
 
 }
