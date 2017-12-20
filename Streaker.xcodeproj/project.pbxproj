@@ -17,12 +17,13 @@
 		D480843B1FE9B0E600F78738 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480843A1FE9B0E500F78738 /* SecondViewController.swift */; };
 		D480843E1FE9B0E600F78738 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D480843C1FE9B0E600F78738 /* Main.storyboard */; };
 		D48084401FE9B0E600F78738 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D480843F1FE9B0E600F78738 /* Assets.xcassets */; };
-		D48084431FE9B0E600F78738 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48084411FE9B0E600F78738 /* LaunchScreen.storyboard */; };
 		D480844B1FE9B50400F78738 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480844A1FE9B50400F78738 /* UIViewExtension.swift */; };
 		D480844D1FE9C84E00F78738 /* StreakProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480844C1FE9C84E00F78738 /* StreakProgressView.swift */; };
 		D480844F1FE9CC5300F78738 /* Trophy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480844E1FE9CC5300F78738 /* Trophy.swift */; };
 		D48084531FE9D1D100F78738 /* TrophyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48084521FE9D1D100F78738 /* TrophyCell.swift */; };
 		D48084551FE9D84200F78738 /* TrophyViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48084541FE9D84200F78738 /* TrophyViewHeaderView.swift */; };
+		D4A28A021FEAC40E005D271F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A28A001FEAC362005D271F /* Launch Screen.storyboard */; };
+		D4A28A041FEACA76005D271F /* TrophyModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A28A031FEACA76005D271F /* TrophyModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,13 +40,14 @@
 		D480843A1FE9B0E500F78738 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		D480843D1FE9B0E600F78738 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D480843F1FE9B0E600F78738 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D48084421FE9B0E600F78738 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D48084441FE9B0E600F78738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D480844A1FE9B50400F78738 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		D480844C1FE9C84E00F78738 /* StreakProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakProgressView.swift; sourceTree = "<group>"; };
 		D480844E1FE9CC5300F78738 /* Trophy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trophy.swift; sourceTree = "<group>"; };
 		D48084521FE9D1D100F78738 /* TrophyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrophyCell.swift; sourceTree = "<group>"; };
 		D48084541FE9D84200F78738 /* TrophyViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrophyViewHeaderView.swift; sourceTree = "<group>"; };
+		D4A28A001FEAC362005D271F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		D4A28A031FEACA76005D271F /* TrophyModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrophyModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +106,8 @@
 				D48084381FE9B0E500F78738 /* FirstViewController.swift */,
 				D480843A1FE9B0E500F78738 /* SecondViewController.swift */,
 				D480843C1FE9B0E600F78738 /* Main.storyboard */,
+				D4A28A001FEAC362005D271F /* Launch Screen.storyboard */,
 				D480843F1FE9B0E600F78738 /* Assets.xcassets */,
-				D48084411FE9B0E600F78738 /* LaunchScreen.storyboard */,
 				D48084441FE9B0E600F78738 /* Info.plist */,
 				6EDEBDBA1FEA1354002F198C /* awsconfiguration.json */,
 				D480844A1FE9B50400F78738 /* UIViewExtension.swift */,
@@ -114,6 +116,7 @@
 				D48084521FE9D1D100F78738 /* TrophyCell.swift */,
 				D48084541FE9D84200F78738 /* TrophyViewHeaderView.swift */,
 				6EDEBDBE1FEA1ED5002F198C /* FirstViewControllerViewModel.swift */,
+				D4A28A031FEACA76005D271F /* TrophyModalViewController.swift */,
 			);
 			path = Streaker;
 			sourceTree = "<group>";
@@ -181,10 +184,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D48084431FE9B0E600F78738 /* LaunchScreen.storyboard in Resources */,
 				D41848791FEAB1E10045CC99 /* Dekiru.ttf in Resources */,
 				D48084401FE9B0E600F78738 /* Assets.xcassets in Resources */,
 				D480843E1FE9B0E600F78738 /* Main.storyboard in Resources */,
+				D4A28A021FEAC40E005D271F /* Launch Screen.storyboard in Resources */,
 				6EDEBDBB1FEA1354002F198C /* awsconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4A28A041FEACA76005D271F /* TrophyModalViewController.swift in Sources */,
 				6EDEBDBF1FEA1ED5002F198C /* FirstViewControllerViewModel.swift in Sources */,
 				D480843B1FE9B0E600F78738 /* SecondViewController.swift in Sources */,
 				D480844D1FE9C84E00F78738 /* StreakProgressView.swift in Sources */,
@@ -284,14 +288,6 @@
 				D480843D1FE9B0E600F78738 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D48084411FE9B0E600F78738 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D48084421FE9B0E600F78738 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

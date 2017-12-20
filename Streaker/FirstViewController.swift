@@ -21,10 +21,10 @@ class FirstViewController: UIViewController {
     
     let emitter = CAEmitterLayer()
     
-    let goal = 5000.00
-    let saved = 2000.00
+    let goal = 500.00
+    let saved = 200.00
     let daysStreaked = 20
-    let quote = "It's hard to make up quotes after hours of hacking"
+    let quote = "The journey of a thousand miles begins with a single step."
     
     let viewModel = FirstViewControllerViewModel()
     let bag = DisposeBag()
@@ -61,14 +61,6 @@ class FirstViewController: UIViewController {
             [weak self]streaksFromDynamo in
             if let streaksFromDynamo = streaksFromDynamo {
                 self?.progressView.setProgress(0, animated: false)
-                if let goal = self?.goal, let saved = self?.saved{
-                    self?.progressView.setProgress(Float(saved/goal), animated: true)
-                    let goalAmt = String(format: "$%.02f", goal)
-                    let savedAmt = String(format: "$%.02f", saved)
-                    self?.goalLabel.text = "Goal: \(goalAmt)"
-                    self?.savedLabel.text = "Saved: \(savedAmt)"
-
-                }
                 self?.quoteText.text = self?.quote
                 self?.streak.method = .easeIn
                 self?.streak.formatBlock = { (value: CGFloat) -> String in do {
@@ -78,6 +70,28 @@ class FirstViewController: UIViewController {
                 }
                 if let streakFromDynamo = streaksFromDynamo._streak{
                     self?.streak.countFromZero(to: CGFloat(truncating: streakFromDynamo))
+                    if let goal = self?.goal, var saved = self?.saved{
+                        
+                        saved = saved + ((streaksFromDynamo._streak?.doubleValue)! * 10)
+                        
+                        self?.progressView.setProgress(Float(saved/goal), animated: true)
+                        let goalAmt = String(format: "$%.02f", goal)
+                        let savedAmt = String(format: "$%.02f", saved)
+                        self?.goalLabel.text = "Goal: \(goalAmt)"
+                        self?.savedLabel.text = "Saved: \(savedAmt)"
+                    }
+                    
+//                    if streaksFromDynamo._streak?.intValue == 3 {
+//                        launchTrophyModal()
+//                    }
+                } else {
+                    if let goal = self?.goal, let saved = self?.saved{
+                        self?.progressView.setProgress(Float(saved/goal), animated: true)
+                        let goalAmt = String(format: "$%.02f", goal)
+                        let savedAmt = String(format: "$%.02f", saved)
+                        self?.goalLabel.text = "Goal: \(goalAmt)"
+                        self?.savedLabel.text = "Saved: \(savedAmt)"
+                    }
                 }
                 
             }
@@ -92,6 +106,12 @@ class FirstViewController: UIViewController {
         gradient.startPoint = CGPoint.zero;
         gradient.endPoint = CGPoint(x: 0, y: 1)
         view.layer.insertSublayer(gradient, at: 0)
+    }
+    
+    func launchTrophyModal() {
+        let modalViewController = TrophyModalViewController()
+        modalViewController.modalPresentationStyle = .overCurrentContext
+        present(modalViewController, animated: true, completion: nil)
     }
 }
 
