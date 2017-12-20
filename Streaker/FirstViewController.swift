@@ -80,7 +80,7 @@ class FirstViewController: UIViewController {
                         self?.savedLabel.text = "Saved: \(savedAmt)"
                     }
                     
-                    if streakFromDynamo.intValue > 3 {
+                    if streakFromDynamo.intValue == 3 {
                         self?.launchTrophyModal()
                     }
                 }
