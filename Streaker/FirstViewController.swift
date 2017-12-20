@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AWSDynamoDB
+import AWSCore
 
 class FirstViewController: UIViewController {
     
@@ -35,6 +37,19 @@ class FirstViewController: UIViewController {
         let swipeControl = UISwipeGestureRecognizer(target: self, action: #selector(self.refreshUI))
         swipeControl.direction = .down
         self.view.addGestureRecognizer(swipeControl)
+        
+        let mapper = AWSDynamoDBObjectMapper.default()
+        let streaksObject:Streaks = Streaks()
+        //streaksObject._streakId = 1
+        mapper.load(Streaks.self, hashKey: 1, rangeKey: nil){
+            objectModel, error in
+            if let error = error {
+                print(error)
+            }
+            if let objectModel = objectModel as? Streaks{
+                print(objectModel)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
