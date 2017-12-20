@@ -6,17 +6,24 @@ PODS:
     - AWSCore (= 2.6.9)
   - AWSMobileClient (2.6.9):
     - AWSAuthCore (= 2.6.9)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
 
 DEPENDENCIES:
   - AWSDynamoDB
   - AWSMobileClient
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
 
 SPEC CHECKSUMS:
   AWSAuthCore: 4c882c1371cd0907414ff25c29e97fda4a69b57d
   AWSCore: 1aa9b5a4c9ee70be5b18914e1e75fa0dc0da75de
   AWSDynamoDB: 272e874ea1a0b2712963c30313fbedba120a94d2
   AWSMobileClient: 7928d2da4b52f318ac4b89bed11bd27f4ab5d934
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
 
-PODFILE CHECKSUM: d0c33ce43e7770253716fe84aa8d526b567fa82b
+PODFILE CHECKSUM: 32ab238ffb96713e441e56017c3d8c825faffefb
 
 COCOAPODS: 1.3.1

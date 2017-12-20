@@ -6,6 +6,8 @@ target 'Streaker' do
   use_frameworks!
   pod 'AWSMobileClient'
   pod 'AWSDynamoDB'
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'
   # Pods for Streaker
 
 end
