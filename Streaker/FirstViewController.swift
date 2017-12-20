@@ -17,6 +17,8 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var goalLabel: UILabel!
     @IBOutlet weak var streak: UIButton!
     
+    let emitter = CAEmitterLayer()
+    
     let goal = 5000.00
     let saved = 2000.00
     let daysStreaked = 20
@@ -26,10 +28,10 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         
         progressView.setProgress(0.0, animated: false)
-        goalLabel.text = "Goal: 🤔"
-        savedLabel.text = "Saved: 🤔"
+        goalLabel.text = "🤔"
+        savedLabel.text = "🤔"
         quoteText.text = "Tap the streak circle to update your streak 👆"
-        streak.setTitle("🔄", for: .normal)
+        streak.setTitle("↻", for: .normal)
         streak.addTarget(self, action: #selector(self.refreshUI), for: .touchUpInside)
         
         let swipeControl = UISwipeGestureRecognizer(target: self, action: #selector(self.refreshUI))
@@ -48,6 +50,5 @@ class FirstViewController: UIViewController {
         quoteText.text = quote
         streak.setTitle("\(daysStreaked)", for: .normal)
     }
-
 }
 
