@@ -7,5 +7,5 @@ target 'Streaker' do
   pod 'AWSMobileClient', '~> 2.6.6'
   pod 'AWSDynamoDB', '~> 2.6.6'
   # Pods for Streaker
-
+  pod 'UICountingLabel'
 end

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UICountingLabel
 
 class FirstViewController: UIViewController {
     
@@ -15,7 +16,8 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var quoteText: UILabel!
     @IBOutlet weak var savedLabel: UILabel!
     @IBOutlet weak var goalLabel: UILabel!
-    @IBOutlet weak var streak: UIButton!
+    @IBOutlet weak var streak: UICountingLabel!
+    
     
     let emitter = CAEmitterLayer()
     
@@ -31,8 +33,7 @@ class FirstViewController: UIViewController {
         goalLabel.text = "🤔"
         savedLabel.text = "🤔"
         quoteText.text = "Tap the streak circle to update your streak 👆"
-        streak.setTitle("↻", for: .normal)
-        streak.addTarget(self, action: #selector(self.refreshUI), for: .touchUpInside)
+        streak.text = "↻"
         
         let swipeControl = UISwipeGestureRecognizer(target: self, action: #selector(self.refreshUI))
         swipeControl.direction = .down
@@ -44,11 +45,19 @@ class FirstViewController: UIViewController {
     }
     
     @objc func refreshUI() {
+        progressView.setProgress(0, animated: false)
         progressView.setProgress(Float(saved/goal), animated: true)
         goalLabel.text = "Goal: $\(goal)"
         savedLabel.text = "Saved: $\(saved)"
         quoteText.text = quote
-        streak.setTitle("\(daysStreaked)", for: .normal)
+        
+        streak.method = .easeIn
+        streak.formatBlock = { (value: CGFloat) -> String in do {
+            let intVal = Int(value)
+            return "\(intVal)"
+            }
+        }
+        streak.countFromZero(to: CGFloat(self.daysStreaked))
     }
 }
 
