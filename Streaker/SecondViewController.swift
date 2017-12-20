@@ -14,11 +14,11 @@ class SecondViewController: UICollectionViewController {
     fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     fileprivate let itemsPerRow: CGFloat = 2
     
-    let trophies:[Trophy] = [Trophy(image: #imageLiteral(resourceName: "launchscreen"), title: "Trophy 1"),
-                             Trophy(image: #imageLiteral(resourceName: "launchscreen"), title: "Trophy 2"),
-                             Trophy(image: #imageLiteral(resourceName: "launchscreen"), title: "Trophy 3"),
-                             Trophy(image: #imageLiteral(resourceName: "launchscreen"), title: "Trophy 4"),
-                             Trophy(image: #imageLiteral(resourceName: "launchscreen"), title: "Trophy 5")]
+    let trophies:[Trophy] = [Trophy(image: #imageLiteral(resourceName: "bkg"), title: "Trophy 1"),
+                             Trophy(image: #imageLiteral(resourceName: "bkg"), title: "Trophy 2"),
+                             Trophy(image: #imageLiteral(resourceName: "bkg"), title: "Trophy 3"),
+                             Trophy(image: #imageLiteral(resourceName: "bkg"), title: "Trophy 4"),
+                             Trophy(image: #imageLiteral(resourceName: "bkg"), title: "Trophy 5")]
     
     override func viewDidLoad() {
         super.viewDidLoad()

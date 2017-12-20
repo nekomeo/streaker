@@ -6,12 +6,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue-MediumItalic</string>
+        <array key="Kohinoor.ttc">
+            <string>KohinoorDevanagari-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -23,30 +24,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreen" translatesAutoresizingMaskIntoConstraints="NO" id="tLQ-UT-wFu">
-                                <rect key="frame" x="67" y="213" width="240" height="240"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="1Mf-1t-DN6"/>
-                                    <constraint firstAttribute="height" constant="240" id="xAq-UQ-JNF"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bkg" translatesAutoresizingMaskIntoConstraints="NO" id="7mQ-qy-I18">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STREAKER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNk-lC-CL7">
-                                <rect key="frame" x="37" y="153" width="300" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Nature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNk-lC-CL7">
+                                <rect key="frame" x="38" y="120" width="298.5" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="9ju-Qm-GD2"/>
-                                    <constraint firstAttribute="width" constant="300" id="pgz-N0-KdH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="51"/>
-                                <color key="textColor" red="0.12477905303239822" green="0.51207172870635986" blue="0.78977054357528687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="45"/>
+                                <color key="textColor" red="0.32911333440000001" green="0.5113205314" blue="0.58441853519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="tLQ-UT-wFu" firstAttribute="top" secondItem="MNk-lC-CL7" secondAttribute="bottom" id="5ZL-Ix-oSf"/>
-                            <constraint firstItem="tLQ-UT-wFu" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GgV-YV-7rY"/>
-                            <constraint firstItem="tLQ-UT-wFu" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="M2K-Vt-lbl"/>
+                            <constraint firstItem="MNk-lC-CL7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="UI2-oZ-GPV"/>
                             <constraint firstItem="MNk-lC-CL7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cht-ZT-uLt"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="7mQ-qy-I18" secondAttribute="bottom" id="fST-DG-FxB"/>
+                            <constraint firstItem="7mQ-qy-I18" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gFQ-Gg-Tvd"/>
+                            <constraint firstItem="7mQ-qy-I18" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="i2O-DD-1PS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7mQ-qy-I18" secondAttribute="trailing" id="iut-tm-p93"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -57,6 +55,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launchscreen" width="512" height="512"/>
+        <image name="bkg" width="750" height="1334"/>
     </resources>
 </document>

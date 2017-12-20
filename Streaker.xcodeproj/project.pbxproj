@@ -11,6 +11,7 @@
 		6EDEBDBD1FEA1371002F198C /* Streaks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDEBDBC1FEA1371002F198C /* Streaks.swift */; };
 		6EDEBDBF1FEA1ED5002F198C /* FirstViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDEBDBE1FEA1ED5002F198C /* FirstViewControllerViewModel.swift */; };
 		79A6DFB31BD4637065177E28 /* Pods_Streaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 139300F2B1AABE4723AA5D87 /* Pods_Streaker.framework */; };
+		D41848791FEAB1E10045CC99 /* Dekiru.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D41848761FEAA79A0045CC99 /* Dekiru.ttf */; };
 		D48084371FE9B0E500F78738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48084361FE9B0E500F78738 /* AppDelegate.swift */; };
 		D48084391FE9B0E500F78738 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48084381FE9B0E500F78738 /* FirstViewController.swift */; };
 		D480843B1FE9B0E600F78738 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480843A1FE9B0E500F78738 /* SecondViewController.swift */; };
@@ -31,6 +32,7 @@
 		6EDEBDBC1FEA1371002F198C /* Streaks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Streaks.swift; sourceTree = "<group>"; };
 		6EDEBDBE1FEA1ED5002F198C /* FirstViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewControllerViewModel.swift; sourceTree = "<group>"; };
 		7D7025917993C27425D1AC79 /* Pods-Streaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Streaker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Streaker/Pods-Streaker.debug.xcconfig"; sourceTree = "<group>"; };
+		D41848761FEAA79A0045CC99 /* Dekiru.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dekiru.ttf; sourceTree = "<group>"; };
 		D48084331FE9B0E500F78738 /* Streaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Streaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48084361FE9B0E500F78738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D48084381FE9B0E500F78738 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		D48084351FE9B0E500F78738 /* Streaker */ = {
 			isa = PBXGroup;
 			children = (
+				D41848761FEAA79A0045CC99 /* Dekiru.ttf */,
 				6EDEBDBC1FEA1371002F198C /* Streaks.swift */,
 				D48084361FE9B0E500F78738 /* AppDelegate.swift */,
 				D48084381FE9B0E500F78738 /* FirstViewController.swift */,
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D48084431FE9B0E600F78738 /* LaunchScreen.storyboard in Resources */,
+				D41848791FEAB1E10045CC99 /* Dekiru.ttf in Resources */,
 				D48084401FE9B0E600F78738 /* Assets.xcassets in Resources */,
 				D480843E1FE9B0E600F78738 /* Main.storyboard in Resources */,
 				6EDEBDBB1FEA1354002F198C /* awsconfiguration.json in Resources */,
@@ -407,7 +411,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9Z2D4GQXF7;
+				DEVELOPMENT_TEAM = HR48KX3K89;
 				INFOPLIST_FILE = Streaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ajkueterman.Streaker;
@@ -426,7 +430,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9Z2D4GQXF7;
+				DEVELOPMENT_TEAM = HR48KX3K89;
 				INFOPLIST_FILE = Streaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ajkueterman.Streaker;

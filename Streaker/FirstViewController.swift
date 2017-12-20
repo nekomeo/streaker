@@ -13,11 +13,11 @@ import RxSwift
 class FirstViewController: UIViewController {
     
     @IBOutlet weak var progressView: UIProgressView!
-    @IBOutlet weak var quoteView: UIView!
     @IBOutlet weak var quoteText: UILabel!
     @IBOutlet weak var savedLabel: UILabel!
     @IBOutlet weak var goalLabel: UILabel!
     @IBOutlet weak var streak: UICountingLabel!
+    
     
     let emitter = CAEmitterLayer()
     
@@ -34,9 +34,9 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         
         progressView.setProgress(0.0, animated: false)
-        goalLabel.text = "🤔"
-        savedLabel.text = "🤔"
-        quoteText.text = "Tap the streak circle to update your streak 👆"
+        goalLabel.text = "☁"
+        savedLabel.text = "☁"
+        quoteText.text = "Tap the streak circle to update your streak."
         streak.text = "↻"
         
         let swipeControl = UISwipeGestureRecognizer(target: self, action: #selector(self.refreshUI))
@@ -63,8 +63,10 @@ class FirstViewController: UIViewController {
                 self?.progressView.setProgress(0, animated: false)
                 if let goal = self?.goal, let saved = self?.saved{
                     self?.progressView.setProgress(Float(saved/goal), animated: true)
-                    self?.goalLabel.text = "Goal: $\(goal)"
-                    self?.savedLabel.text = "Saved: $\(saved)"
+                    let goalAmt = String(format: "$%.02f", goal)
+                    let savedAmt = String(format: "$%.02f", saved)
+                    self?.goalLabel.text = "Goal: \(goalAmt)"
+                    self?.savedLabel.text = "Saved: \(savedAmt)"
 
                 }
                 self?.quoteText.text = self?.quote
@@ -75,13 +77,21 @@ class FirstViewController: UIViewController {
                     }
                 }
                 if let streakFromDynamo = streaksFromDynamo._streak{
-                    self?.streak.countFromZero(to: CGFloat(streakFromDynamo))
+                    self?.streak.countFromZero(to: CGFloat(truncating: streakFromDynamo))
                 }
                 
             }
         }).disposed(by: bag)
-        
-
+    
+    }
+    
+    func createGradientOnView(view: UIView) {
+        let gradient = CAGradientLayer()
+        gradient.frame = view.bounds
+        gradient.colors = [UIColor.blue.cgColor, UIColor.white.cgColor]
+        gradient.startPoint = CGPoint.zero;
+        gradient.endPoint = CGPoint(x: 0, y: 1)
+        view.layer.insertSublayer(gradient, at: 0)
     }
 }
 
