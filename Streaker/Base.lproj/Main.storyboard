@@ -138,7 +138,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SxA-yS-OM0">
+                            <view opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SxA-yS-OM0">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" red="0.32911333440000001" green="0.5113205314" blue="0.58441853519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -181,6 +181,8 @@
                     </view>
                     <connections>
                         <outlet property="animatedImage" destination="3Me-VU-h9X" id="ICj-JC-Upu"/>
+                        <outlet property="bigBlur" destination="gA5-S1-ZsQ" id="bsj-Kc-Dq8"/>
+                        <outlet property="blur" destination="SxA-yS-OM0" id="RDb-xf-BHV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAC-g3-JvX" userLabel="First Responder" sceneMemberID="firstResponder"/>

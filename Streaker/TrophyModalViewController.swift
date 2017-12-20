@@ -11,6 +11,8 @@ import UIKit
 
 class TrophyModalViewController: UIViewController {
     
+    @IBOutlet weak var blur: UIView!
+    @IBOutlet var bigBlur: UIView!
     
     @IBOutlet weak var animatedImage: UIImageView!
     
@@ -21,6 +23,11 @@ class TrophyModalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = blur.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blur.addSubview(blurEffectView)
     }
     
     override func viewDidAppear(_ animated: Bool) {
