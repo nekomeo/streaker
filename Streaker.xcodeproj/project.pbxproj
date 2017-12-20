@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6ED248311FE9F23700145A0F /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 6ED248301FE9F23700145A0F /* awsconfiguration.json */; };
+		79A6DFB31BD4637065177E28 /* Pods_Streaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 139300F2B1AABE4723AA5D87 /* Pods_Streaker.framework */; };
 		D48084371FE9B0E500F78738 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48084361FE9B0E500F78738 /* AppDelegate.swift */; };
 		D48084391FE9B0E500F78738 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48084381FE9B0E500F78738 /* FirstViewController.swift */; };
 		D480843B1FE9B0E600F78738 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D480843A1FE9B0E500F78738 /* SecondViewController.swift */; };
@@ -21,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		139300F2B1AABE4723AA5D87 /* Pods_Streaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Streaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21047898B713D683CEC53CA3 /* Pods-Streaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Streaker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Streaker/Pods-Streaker.release.xcconfig"; sourceTree = "<group>"; };
+		6ED248301FE9F23700145A0F /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		7D7025917993C27425D1AC79 /* Pods-Streaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Streaker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Streaker/Pods-Streaker.debug.xcconfig"; sourceTree = "<group>"; };
 		D48084331FE9B0E500F78738 /* Streaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Streaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48084361FE9B0E500F78738 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D48084381FE9B0E500F78738 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -41,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A6DFB31BD4637065177E28 /* Pods_Streaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01D56A85799E1AB9B964E772 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				139300F2B1AABE4723AA5D87 /* Pods_Streaker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05C7B9A4EAB35A23C2F5166A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D7025917993C27425D1AC79 /* Pods-Streaker.debug.xcconfig */,
+				21047898B713D683CEC53CA3 /* Pods-Streaker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D480842A1FE9B0E500F78738 = {
 			isa = PBXGroup;
 			children = (
 				D48084351FE9B0E500F78738 /* Streaker */,
 				D48084341FE9B0E500F78738 /* Products */,
+				05C7B9A4EAB35A23C2F5166A /* Pods */,
+				01D56A85799E1AB9B964E772 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +99,7 @@
 				D480843F1FE9B0E600F78738 /* Assets.xcassets */,
 				D48084411FE9B0E600F78738 /* LaunchScreen.storyboard */,
 				D48084441FE9B0E600F78738 /* Info.plist */,
+				6ED248301FE9F23700145A0F /* awsconfiguration.json */,
 				D480844A1FE9B50400F78738 /* UIViewExtension.swift */,
 				D480844C1FE9C84E00F78738 /* StreakProgressView.swift */,
 				D480844E1FE9CC5300F78738 /* Trophy.swift */,
@@ -89,9 +116,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D48084471FE9B0E600F78738 /* Build configuration list for PBXNativeTarget "Streaker" */;
 			buildPhases = (
+				7F65B5991DC2617FABE766A8 /* [CP] Check Pods Manifest.lock */,
 				D480842F1FE9B0E500F78738 /* Sources */,
 				D48084301FE9B0E500F78738 /* Frameworks */,
 				D48084311FE9B0E500F78738 /* Resources */,
+				0DCDF4525E2B80EE09EF240F /* [CP] Embed Pods Frameworks */,
+				7B584B23559E6CFB6E4A2562 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,12 +172,73 @@
 			buildActionMask = 2147483647;
 			files = (
 				D48084431FE9B0E600F78738 /* LaunchScreen.storyboard in Resources */,
+				6ED248311FE9F23700145A0F /* awsconfiguration.json in Resources */,
 				D48084401FE9B0E600F78738 /* Assets.xcassets in Resources */,
 				D480843E1FE9B0E600F78738 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DCDF4525E2B80EE09EF240F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Streaker/Pods-Streaker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSDynamoDB/AWSDynamoDB.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSDynamoDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Streaker/Pods-Streaker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B584B23559E6CFB6E4A2562 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Streaker/Pods-Streaker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F65B5991DC2617FABE766A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Streaker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D480842F1FE9B0E500F78738 /* Sources */ = {
@@ -296,10 +387,11 @@
 		};
 		D48084481FE9B0E600F78738 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D7025917993C27425D1AC79 /* Pods-Streaker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HR48KX3K89;
+				DEVELOPMENT_TEAM = 9Z2D4GQXF7;
 				INFOPLIST_FILE = Streaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ajkueterman.Streaker;
@@ -311,10 +403,11 @@
 		};
 		D48084491FE9B0E600F78738 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21047898B713D683CEC53CA3 /* Pods-Streaker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HR48KX3K89;
+				DEVELOPMENT_TEAM = 9Z2D4GQXF7;
 				INFOPLIST_FILE = Streaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ajkueterman.Streaker;
