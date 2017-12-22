@@ -1,5 +1,7 @@
-# streaker
+# Second Nature
 A Lex-powered Streak-keeper
+
+![Second Nature main screen](https://github.com/robotsquidward/streaker/blob/master/Simulator%20Screen%20Shot%20-%20iPhone%20X%20-%202017-12-20%20at%2012.07.46.png?raw=true)
 
 ## Build Issues
 
